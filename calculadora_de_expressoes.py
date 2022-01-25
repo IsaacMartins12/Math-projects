@@ -113,7 +113,7 @@ def conta_especial(exp1,indice) :
     if len(aux) == 1 : return(aux[0]) 
   
 def calcula(exp) :
- expressao = exp.split()
+ expressao = exp
  valor = 0 
  while (True) :
   if '('in expressao and ')' in expressao :
@@ -168,7 +168,6 @@ while (True) :
  exp = []
  exp = input("\nSua expressao : ") 
  print("\n\n")
- print(exp,'\n')
  print(f'\n\nO valor da sua expressao é {round(calcula(exp),3)} \n')
  novamente = input(('\n\nQuer colocar outra expressao ? [S/N] : '))
  if novamente == 'N' :
