@@ -121,7 +121,7 @@ op = int(input('ESCOLHA A CATEGORIA : '))
 if (op==1) :
  words = ['macaco','arara','urso','peixe','cachorro','gato','pelicano','tubarao','avestruz','tartaruga','jabuti', 'orangotango','camarao','cavalo','tigre','onça','foca','baleia','rinoceronte','gaivota','hamster']
 if (op==2) :
-   words = ['alemanha','portugal','brasil','argetina','chile','uruguai','peru','marrocos','turquia','arzebaijao','mexico', 'espanha','italia','finlandia','franca','holanda','nigeria','cuba','india','china','japao']
+   words = ['alemanha','portugal','brasil','argentina','chile','uruguai','peru','marrocos','turquia','arzebaijao','mexico', 'espanha','italia','finlandia','franca','holanda','nigeria','cuba','india','china','japao']
 if (op==1 or op==2) :
  word_index = random.randint(0,21)   #sorteia um indice da lista
  word_size = len(words[word_index])  #pega o tamanho da palavra escohida
