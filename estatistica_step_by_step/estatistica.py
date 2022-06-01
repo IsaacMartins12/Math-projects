@@ -5,10 +5,10 @@ def media() :   ## Apresenta o step by step de como encontrar a média aritméti
   soma = 0
   sequencia = input('Sua sequencia -- > ').split(' ')  
   print('\n')
-
-  init()
-  
   print('\n')
+  for i in range (0,len(sequencia)) :
+    soma += float(sequencia[i])
+    resposta_media = soma/len(sequencia)
   print('(' , soma , ')' , '/' , len(sequencia))
   print('\nSua média é : ' , round(resposta_media,3),'\n')
 
@@ -226,7 +226,7 @@ def variancia () :   ## Shows the step by step of how to find the variance of a 
    print(conta[i] , end=" ")
   print('\n')
 
-  resposta = calculo.calcula1(conta) ## Método do script "calculo" que realiza as operações
+  resposta = calculo.calcula1(conta)
 
   print('A variância vale : ',round(float(resposta),3))
   print('\n')
