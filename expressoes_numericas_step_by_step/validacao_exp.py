@@ -1,3 +1,5 @@
+## Script responável por validar a expressão a ser calculada
+
 def valida_expressao(exp4) :
 
  caracteres = {' ','%','$','!','@','¨','=','§','|','_'}
