@@ -226,7 +226,7 @@ def variancia () :   ## Shows the step by step of how to find the variance of a 
    print(conta[i] , end=" ")
   print('\n')
 
-  resposta = calculo.calcula1(conta)
+  resposta = calculo.calcula1(conta) ## Método do script "calculo" que realiza as operações
 
   print('A variância vale : ',round(float(resposta),3))
   print('\n')
