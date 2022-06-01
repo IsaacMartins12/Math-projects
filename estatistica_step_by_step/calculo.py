@@ -1,3 +1,7 @@
+### Script responsável por realizar as operações matemáticas
+
+### Copie esse arquivo na pasta dos seus projetos em python que precisam mostrar operacoes matematicas step by step
+
 sinais = {'{','}','[',']','(',')'}
 
 def deletar (aux,pos,exp3,indice,valor) :  ## Deleta os elementos que foram operados
@@ -164,7 +168,7 @@ def calcula1(exp) :  ## Realiza conta que nao tenham elementos especiais
  op = 0
 
 
- while(True) :           ## Realiza a sequencia de operacoes
+ while(True) :   ## Realiza a sequencia de operacoes
    
    if '*' in expressao and '/' in expressao :
 
