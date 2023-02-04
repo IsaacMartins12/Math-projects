@@ -5,7 +5,7 @@ import validacao_exp
 def apresenta_menu() :
 
     exp = []
-    exp = input("\nSua expressao : ").split(" ") 
+    exp = input("\nSua expressao : ")
     print("\n")
     return exp
 
@@ -109,6 +109,41 @@ def calcula(exp) :  ## Realiza conta que nao tenham elementos especiais
     print('\nExpressao incorreta !')
     return 1
 
+def separa_dados(string) :
+ 
+  conta = []
+  sinais = ['+','-','*','/','^','(',')','^','{','}','[',']']
+  numeros = ['0','1','2','3','4','5','6','7','8','9']
+  controle = 0
+  taxa = 0
+
+  if (string[len(string)-1] in numeros) : taxa = 2
+  if (string[len(string)-1] in sinais) : taxa = 0
+
+  for i in range(0,len(string),1) :
+      
+    if (i != len(string)-taxa):
+      
+      if string[i] in sinais :
+          conta.append(string[controle:i])
+          conta.append(string[i])
+          controle=i+1
+          
+    else :
+          if string[i] in numeros :
+              conta.append(string[controle:len(string)])
+              
+  conta_aux = []
+
+  for i in conta :
+        if i != "" :
+          conta_aux.append(i)
+        
+  conta = conta+aux      
+  return conta
+
+
+
 print ('\n\n'+'='*30 + ' CALCULADORA DE EXPRESSOES NUMÉRICAS  ' + '='*30) 
 print ('\n (*) - multiplicação entre 2 e 5 --> exemplo : 2 * 5 ')
 print ('\n (/) - divisao entre 2 e 5 --> exemplo : 2 / 5  , se for uma fração use assim --> ( 2 / 5 )')
@@ -119,7 +154,9 @@ print('\nOBSERVACAO : Todo digito do teclado deve ser separado por espaço -- > 
 print("\n\n Exemplo de expressao válida : { 2 * 5 + 4 - [ ( 2 + 9 ) ] + 2 } \n\n")
 
 while (True) :
- exp = apresenta_menu()
+ expressao = apresenta_menu()
+ exp = separa_dados(expressao) 
+ print(exp)
  if (validacao_exp.valida_expressao(exp) and calcula(exp)!=1):
     print(f'\n\nO valor da sua expressao é {round(calcula(exp),3)} \n')
     novamente = input(('\n\nQuer colocar outra expressao ? [S/N] : '))
