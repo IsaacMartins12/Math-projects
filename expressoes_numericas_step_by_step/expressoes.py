@@ -5,7 +5,7 @@ import validacao_exp
 def apresenta_menu() :
 
     exp = []
-    exp = input("\nSua expressao : ")
+    exp = input("\nSua expressao : ").split(" ")
     print("\n")
     return exp
 
