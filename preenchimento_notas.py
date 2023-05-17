@@ -1,3 +1,7 @@
+#Esse código me retorna um dicionario por aluno, a chave é o numero do formulario, e o valor sua nota
+
+# Exemplo :  {1: 7, 2 : 8.5, 3: 9}
+
 import time
 import openpyxl
 
